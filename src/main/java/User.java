@@ -12,16 +12,24 @@ public class User {
     @Column(name = "Email", unique = true, nullable = false)
     private String Email;
 
+    @Column(name = "FirstName", unique = true, nullable = false)
+    private String FirstName;
+
+    @Column(name = "LastName", unique = true, nullable = false)
+    private String LastName;
+
     @Column(name = "Username", unique = true, nullable = false)
     private String Username;
 
     @Column(name = "Password", nullable = false)
     private String Password;
 
-    public User(String username, String password, String email) {
+    public User(String username, String password, String email, String firstName, String lastName) {
         this.Username = username;
         this.Password = password;
         this.Email = email;
+        this.FirstName = firstName;
+        this.LastName = lastName;
     }
 
     public User() {
@@ -51,4 +59,27 @@ public class User {
         this.id = id;
     }
 
+    public String getEmail() {
+        return Email;
+    }
+
+    public void setEmail(String email) {
+        this.Email = email;
+    }
+
+    public String getFirstName() {
+        return FirstName;
+    }
+
+    public void setFirstName(String firstName) {
+        this.FirstName = firstName;
+    }
+
+    public String getLastName() {
+        return LastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.LastName = lastName;
+    }
 }
