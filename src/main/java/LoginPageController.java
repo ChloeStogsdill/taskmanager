@@ -105,7 +105,7 @@ public class LoginPageController {
         ViewSwitcher.switchTo(View.TASK_MANAGER);
     }
 
-    public void exitButtonClicker(ActionEvent event) {
+    public void exitButtonClicked(ActionEvent event) {
         Platform.exit();
     }
 
