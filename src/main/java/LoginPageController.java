@@ -36,7 +36,16 @@ public class LoginPageController {
     Label messageLabel;
 
     public void loginButtonClicked(ActionEvent event) {
+        String username = signupUsernameField.getText();
+        String password = signupPasswordField.getText();
 
+        if(username.isEmpty() || password.isEmpty()) {
+            messageLabel.setText("All fields must be populated");
+        } else if(userExists(username, password)){
+            switchToTasks();
+        } else {
+            messageLabel.setText("Username or password is incorrect");
+        }
     }
 
     public void registerButtonClicked(ActionEvent event) {
@@ -49,7 +58,7 @@ public class LoginPageController {
         if(signupEmailField.getText().isEmpty() || signupUsernameField.getText().isEmpty() || signupPasswordField.getText().isEmpty() ||
                 firstName.isEmpty() || lastName.isEmpty()) {
             messageLabel.setText("All fields must be populated");
-        } else if(userExists(username)) {
+        } else if(usernameExists(username)) {
             messageLabel.setText("Username already exists");
         } else if(emailExists(email)) {
             messageLabel.setText("Email already exists");
@@ -78,11 +87,15 @@ public class LoginPageController {
         return false;
     }
 
-    private boolean userExists(String username){
+    private boolean usernameExists(String username){
         return false;
     }
 
-    public void switchToTasks(ActionEvent event) {
+    private boolean userExists(String username, String password) {
+        return false;
+    }
+
+    public void switchToTasks() {
         ViewSwitcher.switchTo(View.TASK_MANAGER);
     }
 
