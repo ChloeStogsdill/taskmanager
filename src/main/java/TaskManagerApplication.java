@@ -12,7 +12,6 @@ public class TaskManagerApplication {
         ViewSwitcher.setScene(scene);
         ViewSwitcher.switchTo(View.LOGIN);
         stage.setScene(scene);
-        stage.setResizable(false);
         stage.show();
     }
 }
