@@ -6,13 +6,18 @@
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="LoginPageController">
    <children>
-      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="150.0" prefHeight="46.0" prefWidth="300.0" text="Task Manager" textAlignment="CENTER" AnchorPane.topAnchor="0.0">
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="150.0" prefHeight="46.0" prefWidth="300.0" text="Task Manager" textAlignment="CENTER" textFill="#474747" AnchorPane.topAnchor="0.0">
          <font>
             <Font name="Verdana" size="36.0" />
          </font></Label>
-      <Button fx:id="registerButton" alignment="CENTER" contentDisplay="CENTER" layoutX="85.0" layoutY="350.0" mnemonicParsing="false" onAction="#registerButtonClicked" prefHeight="25.0" prefWidth="87.0" text="Register" textAlignment="CENTER" textFill="WHITE">
+      <Button fx:id="registerButton" alignment="CENTER" contentDisplay="CENTER" layoutX="85.0" layoutY="350.0" mnemonicParsing="false" onAction="#registerButtonClicked" prefHeight="25.0" prefWidth="87.0" style="-fx-background-color: #474747;" text="Register" textAlignment="CENTER" textFill="WHITE">
          <font>
             <Font name="Verdana" size="14.0" />
          </font></Button>
+      <Button alignment="CENTER" contentDisplay="CENTER" layoutX="407.0" layoutY="350.0" mnemonicParsing="false" onAction="#loginButtonClicked" prefHeight="28.0" prefWidth="87.0" text="Login" textFill="WHITE" style="-fx-background-color: #474747;">
+         <font>
+            <Font name="Verdana" size="14.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>
