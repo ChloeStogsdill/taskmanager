@@ -20,8 +20,8 @@ public class Task {
     @Column(name = "DueDate")
     private String DueDate;
 
-    @Column(name = "Class")
-    private String Class;
+    @Column(name = "ClassFor")
+    private String ClassFor;
 
     @Column(name = "Recurring", nullable = false)
     private boolean Recurring;
@@ -78,13 +78,13 @@ public class Task {
         DueDate = dueDate;
     }
 
-    @Override
-    public String getClass() {
-        return Class;
+
+    public String getClassFor() {
+        return ClassFor;
     }
 
-    public void setClass(String aClass) {
-        Class = aClass;
+    public void setClassFor(String classFor) {
+        ClassFor = classFor;
     }
 
     public boolean isRecurring() {
