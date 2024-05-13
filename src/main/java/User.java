@@ -9,6 +9,9 @@ public class User {
     @Column (name = "ID")
     private int id;
 
+    @Column(name = "Email", unique = true, nullable = false)
+    private String Email;
+
     @Column(name = "Username", unique = true, nullable = false)
     private String Username;
 
