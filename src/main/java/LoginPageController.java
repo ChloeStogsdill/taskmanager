@@ -10,6 +10,9 @@ public class LoginPageController {
     @FXML
     Button registerButton;
 
+    @FXML
+    Button loginButton;
+
     public void loginButtonClicked(ActionEvent event) {
 
     }
