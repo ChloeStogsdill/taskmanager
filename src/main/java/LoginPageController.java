@@ -1,9 +1,14 @@
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
+import javafx.scene.control.Button;
 import org.hibernate.Session;
 
 public class LoginPageController {
     private static Session session;
+
+    @FXML
+    Button registerButton;
 
     public void loginButtonClicked(ActionEvent event) {
 

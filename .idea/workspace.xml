@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="80e55599-a306-433a-857b-b078f49bbee8" name="Changes" comment="added viewswitcher" />
+    <list default="true" id="80e55599-a306-433a-857b-b078f49bbee8" name="Changes" comment="updated user class to have email in constructor">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/LoginPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/LoginPageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/login-page.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/login-page.fxml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -32,12 +36,12 @@
     &quot;assignee&quot;: &quot;ChloeStogsdill&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/ChloeStogsdill/taskmanager&quot;,
-    &quot;accountId&quot;: &quot;6ec1905c-c79c-4131-ba1a-8d5a059db23e&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/ChloeStogsdill/taskmanager.git",
+    "accountId": "cc194e8e-e144-4f45-be2b-1da15484ad40"
   }
-}</component>
+}]]></component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
   &quot;associatedIndex&quot;: 4
@@ -79,8 +83,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9f38398b9061-18abd8497189-intellij.indexing.shared.core-IU-241.14494.240" />
-        <option value="bundled-js-predefined-1d06a55b98c1-74d2a5396914-JavaScript-IU-241.14494.240" />
+        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.15989.150" />
+        <option value="bundled-js-predefined-1d06a55b98c1-91d5c284f522-JavaScript-IU-241.15989.150" />
       </set>
     </attachedChunks>
   </component>
@@ -95,6 +99,7 @@
       <workItem from="1715549527798" duration="1334000" />
       <workItem from="1715561680781" duration="298000" />
       <workItem from="1715561989931" duration="1492000" />
+      <workItem from="1715608990273" duration="38000" />
     </task>
     <task id="LOCAL-00001" summary="created project">
       <option name="closed" value="true" />
@@ -112,7 +117,23 @@
       <option name="project" value="LOCAL" />
       <updated>1715550200785</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="updated user class to have email">
+      <option name="closed" value="true" />
+      <created>1715607612375</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1715607612375</updated>
+    </task>
+    <task id="LOCAL-00004" summary="updated user class to have email in constructor">
+      <option name="closed" value="true" />
+      <created>1715607664172</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1715607664172</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -132,6 +153,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="created project" />
     <MESSAGE value="added viewswitcher" />
-    <option name="LAST_COMMIT_MESSAGE" value="added viewswitcher" />
+    <MESSAGE value="updated user class to have email" />
+    <MESSAGE value="updated user class to have email in constructor" />
+    <option name="LAST_COMMIT_MESSAGE" value="updated user class to have email in constructor" />
   </component>
 </project>
