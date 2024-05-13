@@ -11,5 +11,6 @@
         <property name="hibernate.hbm2ddl.auto" >update</property>
 
         <mapping class="User"/>
+        <mapping class="Task"/>
     </session-factory>
 </hibernate-configuration>
