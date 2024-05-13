@@ -12,7 +12,7 @@
             <content>
               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #474747;">
                      <children>
-                        <TableView layoutX="16.0" layoutY="13.0" prefHeight="345.0" prefWidth="569.0">
+                        <TableView fx:id="allTasksTable" layoutX="16.0" layoutY="13.0" prefHeight="345.0" prefWidth="569.0">
                           <columns>
                             <TableColumn prefWidth="75.0" text="Task" />
                             <TableColumn prefWidth="204.0" resizable="false" text="Description" />
@@ -28,7 +28,7 @@
                <content>
                   <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #474747;">
                      <children>
-                        <TableView layoutX="11.0" layoutY="13.0" prefHeight="346.0" prefWidth="579.0">
+                        <TableView fx:id="allClassesTable" layoutX="11.0" layoutY="13.0" prefHeight="346.0" prefWidth="579.0">
                           <columns>
                             <TableColumn prefWidth="172.0" text="Class" />
                             <TableColumn prefWidth="75.0" text="CRN" />
@@ -42,7 +42,7 @@
             </Tab>
           <Tab style="-fx-background-color: #474747; -fx-text-base-color: #FFFFFF;" text="Add Task">
             <content>
-              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #474747;">
+              <AnchorPane fx:id="dueDateSelector" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #474747;">
                      <children>
                         <Button alignment="CENTER" contentDisplay="CENTER" layoutX="456.0" layoutY="322.0" mnemonicParsing="false" onAction="#addTaskClicked" prefHeight="22.0" prefWidth="130.0" style="-fx-background-color: #FFFFFF;" text="Add Task" textAlignment="CENTER" textFill="#474747">
                            <font>
@@ -59,30 +59,77 @@
                               <Font name="Verdana" size="18.0" />
                            </font>
                         </Label>
-                        <Label contentDisplay="CENTER" layoutX="15.0" layoutY="186.0" text="Class" textFill="WHITE">
+                        <Label contentDisplay="CENTER" layoutX="16.0" layoutY="195.0" text="Class" textFill="WHITE">
                            <font>
                               <Font name="Verdana" size="18.0" />
                            </font>
                         </Label>
-                        <Label contentDisplay="CENTER" layoutX="14.0" layoutY="219.0" text="Due Date" textFill="WHITE">
+                        <Label contentDisplay="CENTER" layoutX="14.0" layoutY="232.0" text="Due Date" textFill="WHITE">
                            <font>
                               <Font name="Verdana" size="18.0" />
                            </font>
                         </Label>
-                        <Label contentDisplay="CENTER" layoutX="14.0" layoutY="258.0" text="Priority" textFill="WHITE">
+                        <Label contentDisplay="CENTER" layoutX="16.0" layoutY="271.0" text="Priority" textFill="WHITE">
                            <font>
                               <Font name="Verdana" size="18.0" />
                            </font>
                         </Label>
-                        <DatePicker layoutX="126.0" layoutY="218.0" />
-                        <TextField layoutX="15.0" layoutY="37.0" prefHeight="25.0" prefWidth="568.0" />
-                        <TextArea layoutX="16.0" layoutY="98.0" prefHeight="84.0" prefWidth="566.0" />
+                        <DatePicker layoutX="116.0" layoutY="231.0" />
+                        <TextField fx:id="taskTitleField" layoutX="15.0" layoutY="37.0" prefHeight="25.0" prefWidth="568.0" />
+                        <TextArea fx:id="descriptionField" layoutX="16.0" layoutY="98.0" prefHeight="84.0" prefWidth="566.0" />
+                        <SplitMenuButton fx:id="classSelector" layoutX="116.0" layoutY="194.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="174.0" style="-fx-background-color: #FFFFFF;" text="Pick Class" textFill="#474747">
+                          <items>
+                            <MenuItem mnemonicParsing="false" text="Action 1" />
+                            <MenuItem mnemonicParsing="false" text="Action 2" />
+                          </items>
+                           <font>
+                              <Font name="Verdana" size="12.0" />
+                           </font>
+                        </SplitMenuButton>
+                        <TextField fx:id="priorityField" layoutX="116.0" layoutY="270.0" prefHeight="25.0" prefWidth="65.0" />
                      </children></AnchorPane>
             </content>
           </Tab>
             <Tab style="-fx-background-color: #474747; -fx-text-base-color: #FFFFFF;" text="Add Class">
                 <content>
-                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #474747;" />
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #474747;">
+                     <children>
+                        <Button contentDisplay="CENTER" layoutX="436.0" layoutY="239.0" mnemonicParsing="false" onAction="#addClassClicked" style="-fx-background-color: #FFFFFF;" text="Add Class" textAlignment="CENTER" textFill="#474747">
+                           <font>
+                              <Font name="Verdana" size="18.0" />
+                           </font>
+                        </Button>
+                        <Label contentDisplay="CENTER" layoutX="15.0" layoutY="90.0" text="Class" textFill="WHITE">
+                           <font>
+                              <Font name="Verdana" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label contentDisplay="CENTER" layoutX="14.0" layoutY="125.0" text="CRN" textFill="WHITE">
+                           <font>
+                              <Font name="Verdana" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label contentDisplay="CENTER" layoutX="14.0" layoutY="163.0" text="Professor" textFill="WHITE">
+                           <font>
+                              <Font name="Verdana" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label contentDisplay="CENTER" layoutX="15.0" layoutY="201.0" text="Meeting Days" textFill="WHITE">
+                           <font>
+                              <Font name="Verdana" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="15.0" layoutY="245.0" text="Meeting Time" textFill="WHITE">
+                           <font>
+                              <Font name="Verdana" size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="classField" layoutX="160.0" layoutY="89.0" prefHeight="25.0" prefWidth="389.0" />
+                        <TextField fx:id="crnField" layoutX="160.0" layoutY="124.0" />
+                        <TextField fx:id="professorField" layoutX="160.0" layoutY="162.0" />
+                        <TextField fx:id="meetingDaysField" layoutX="160.0" layoutY="200.0" />
+                        <TextField fx:id="meetingTimesField" layoutX="160.0" layoutY="244.0" />
+                     </children></AnchorPane>
                 </content>
             </Tab>
         </tabs>

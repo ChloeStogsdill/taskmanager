@@ -4,8 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="80e55599-a306-433a-857b-b078f49bbee8" name="Changes" comment="added to fxml">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/96e214a7-8fc9-491b-a8a7-4235fea22fc9.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/96e214a7-8fc9-491b-a8a7-4235fea22fc9.xml" afterDir="false" />
+    <list default="true" id="80e55599-a306-433a-857b-b078f49bbee8" name="Changes" comment="adding to fxml for task manager">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/task-manager-page.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/task-manager-page.fxml" afterDir="false" />
     </list>
@@ -103,7 +102,7 @@
       <workItem from="1715561989931" duration="1492000" />
       <workItem from="1715608990273" duration="1658000" />
       <workItem from="1715632375366" duration="2039000" />
-      <workItem from="1715639774245" duration="1128000" />
+      <workItem from="1715639774245" duration="2714000" />
     </task>
     <task id="LOCAL-00001" summary="created project">
       <option name="closed" value="true" />
@@ -233,7 +232,23 @@
       <option name="project" value="LOCAL" />
       <updated>1715639934385</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="creating fxml for task manager">
+      <option name="closed" value="true" />
+      <created>1715641616040</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1715641616040</updated>
+    </task>
+    <task id="LOCAL-00018" summary="adding to fxml for task manager">
+      <option name="closed" value="true" />
+      <created>1715642090387</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1715642090387</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -267,6 +282,8 @@
     <MESSAGE value="added login to fxml" />
     <MESSAGE value="added exit button" />
     <MESSAGE value="added to fxml" />
-    <option name="LAST_COMMIT_MESSAGE" value="added to fxml" />
+    <MESSAGE value="creating fxml for task manager" />
+    <MESSAGE value="adding to fxml for task manager" />
+    <option name="LAST_COMMIT_MESSAGE" value="adding to fxml for task manager" />
   </component>
 </project>
