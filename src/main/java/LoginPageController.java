@@ -39,7 +39,7 @@ public class LoginPageController {
         String password = signupPasswordField.getText();
 
         if(signupEmailField.getText().isEmpty() || signupUsernameField.getText().isEmpty() || signupPasswordField.getText().isEmpty()) {
-            messageLabel.setText("Please fill all the fields");
+            messageLabel.setText("All fields must be populated");
         } else if(userExists(username)) {
             messageLabel.setText("Username already exists");
         } else if(emailExists(email)) {
