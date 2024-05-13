@@ -18,9 +18,10 @@ public class User {
     @Column(name = "Password", nullable = false)
     private String Password;
 
-    public User(String username, String password) {
+    public User(String username, String password, String email) {
         this.Username = username;
         this.Password = password;
+        this.Email = email;
     }
 
     public User() {
