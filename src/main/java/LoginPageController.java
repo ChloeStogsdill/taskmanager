@@ -39,22 +39,28 @@ public class LoginPageController {
         String password = signupPasswordField.getText();
 
         if(signupEmailField.getText().isEmpty() || signupUsernameField.getText().isEmpty() || signupPasswordField.getText().isEmpty()) {
-            messageLabel.setText("Please fill all the fields");
+            messageLabel.setText("All fields must be populated");
         } else if(userExists(username)) {
             messageLabel.setText("Username already exists");
         } else if(emailExists(email)) {
             messageLabel.setText("Email already exists");
         } else {
-            try{
+            try {
                 session = HibernateUtil.getSessionFactory().openSession();
-                Transaction tx = session.beginTransaction();
-                User user = new User(email, username, password);
-                session.save(user);
-                tx.commit();
-            } catch (Exception e){
-                e.printStackTrace();
+                session.beginTransaction();
+
+                User newUser = new User(email, username, password);
+
+                session.persist(newUser);
+                session.getTransaction().commit();
+
+            } catch (Exception e) {
+                System.out.println(e.getMessage());
+                messageLabel.setText("Error occurred during sign-up. Please try again.");
             } finally {
-                session.close();
+                if (session != null && session.isOpen()) {
+                    session.close();
+                }
             }
         }
     }

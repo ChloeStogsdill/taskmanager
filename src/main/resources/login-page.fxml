@@ -46,7 +46,7 @@
          <font>
             <Font name="Verdana" size="14.0" />
          </font></TextField>
-      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="87.0" layoutY="359.0" prefHeight="18.0" prefWidth="427.0" textFill="#474747">
+      <Label fx:id= "messageLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="87.0" layoutY="359.0" prefHeight="18.0" prefWidth="427.0" textFill="#474747">
          <font>
             <Font name="Verdana" size="14.0" />
          </font>
