@@ -2,6 +2,7 @@
 
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #474747;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="TaskManagerPageController">
    <children>
@@ -41,7 +42,42 @@
             </Tab>
           <Tab style="-fx-background-color: #474747; -fx-text-base-color: #FFFFFF;" text="Add Task">
             <content>
-              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #474747;" />
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #474747;">
+                     <children>
+                        <Button alignment="CENTER" contentDisplay="CENTER" layoutX="456.0" layoutY="322.0" mnemonicParsing="false" onAction="#addTaskClicked" prefHeight="22.0" prefWidth="130.0" style="-fx-background-color: #FFFFFF;" text="Add Task" textAlignment="CENTER" textFill="#474747">
+                           <font>
+                              <Font name="Verdana" size="18.0" />
+                           </font>
+                        </Button>
+                        <Label contentDisplay="CENTER" layoutX="14.0" layoutY="14.0" text="Task" textAlignment="CENTER" textFill="WHITE">
+                           <font>
+                              <Font name="Verdana" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label contentDisplay="CENTER" layoutX="14.0" layoutY="70.0" text="Description" textFill="WHITE">
+                           <font>
+                              <Font name="Verdana" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label contentDisplay="CENTER" layoutX="15.0" layoutY="186.0" text="Class" textFill="WHITE">
+                           <font>
+                              <Font name="Verdana" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label contentDisplay="CENTER" layoutX="14.0" layoutY="219.0" text="Due Date" textFill="WHITE">
+                           <font>
+                              <Font name="Verdana" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label contentDisplay="CENTER" layoutX="14.0" layoutY="258.0" text="Priority" textFill="WHITE">
+                           <font>
+                              <Font name="Verdana" size="18.0" />
+                           </font>
+                        </Label>
+                        <DatePicker layoutX="126.0" layoutY="218.0" />
+                        <TextField layoutX="15.0" layoutY="37.0" prefHeight="25.0" prefWidth="568.0" />
+                        <TextArea layoutX="16.0" layoutY="98.0" prefHeight="84.0" prefWidth="566.0" />
+                     </children></AnchorPane>
             </content>
           </Tab>
             <Tab style="-fx-background-color: #474747; -fx-text-base-color: #FFFFFF;" text="Add Class">
