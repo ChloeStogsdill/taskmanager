@@ -85,4 +85,12 @@ public class Task {
         ClassFor = classFor;
     }
 
+    public int getPriorityRating() {
+        return PriorityRating;
+    }
+
+    public void setPriorityRating(int priorityRating) {
+        PriorityRating = priorityRating;
+    }
+
 }
