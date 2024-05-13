@@ -33,11 +33,17 @@ public class LoginPageController {
     TextField signupLastNameField;
 
     @FXML
+    TextField loginUsernameField;
+
+    @FXML
+    TextField loginPasswordField;
+
+    @FXML
     Label messageLabel;
 
     public void loginButtonClicked(ActionEvent event) {
-        String username = signupUsernameField.getText();
-        String password = signupPasswordField.getText();
+        String username = loginUsernameField.getText();
+        String password = loginPasswordField.getText();
 
         if(username.isEmpty() || password.isEmpty()) {
             messageLabel.setText("All fields must be populated");

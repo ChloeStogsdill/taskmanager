@@ -6,43 +6,43 @@
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="LoginPageController">
    <children>
-      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="150.0" layoutY="14.0" prefHeight="46.0" prefWidth="300.0" text="Task Manager" textAlignment="CENTER" textFill="#474747" AnchorPane.topAnchor="14.0">
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="151.0" layoutY="14.0" prefHeight="46.0" prefWidth="300.0" text="Task Manager" textAlignment="CENTER" textFill="#474747" AnchorPane.topAnchor="14.0">
          <font>
             <Font name="Verdana" size="36.0" />
          </font></Label>
-      <Button fx:id="registerButton" alignment="CENTER" contentDisplay="CENTER" layoutX="125.0" layoutY="327.0" mnemonicParsing="false" onAction="#registerButtonClicked" prefHeight="25.0" prefWidth="87.0" style="-fx-background-color: #474747;" text="Register" textAlignment="CENTER" textFill="WHITE">
+      <Button fx:id="registerButton" alignment="CENTER" contentDisplay="CENTER" layoutX="113.0" layoutY="313.0" mnemonicParsing="false" onAction="#registerButtonClicked" prefHeight="25.0" prefWidth="87.0" style="-fx-background-color: #474747;" text="Register" textAlignment="CENTER" textFill="WHITE">
          <font>
             <Font name="Verdana" size="14.0" />
          </font></Button>
-      <Button fx:id="loginButton" alignment="CENTER" contentDisplay="CENTER" layoutX="407.0" layoutY="331.0" mnemonicParsing="false" onAction="#loginButtonClicked" prefHeight="28.0" prefWidth="87.0" style="-fx-background-color: #474747;" text="Login" textFill="WHITE">
+      <Button fx:id="loginButton" alignment="CENTER" contentDisplay="CENTER" layoutX="407.0" layoutY="250.0" mnemonicParsing="false" onAction="#loginButtonClicked" prefHeight="28.0" prefWidth="87.0" style="-fx-background-color: #474747;" text="Login" textFill="WHITE">
          <font>
             <Font name="Verdana" size="14.0" />
          </font>
       </Button>
-      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="126.0" layoutY="162.0" prefHeight="18.0" prefWidth="87.0" text="Email" textAlignment="CENTER" textFill="#474747">
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="114.0" layoutY="150.0" prefHeight="18.0" prefWidth="87.0" text="Email" textAlignment="CENTER" textFill="#474747">
          <font>
             <Font name="Verdana" size="18.0" />
          </font>
       </Label>
-      <TextField fx:id="signupEmailField" layoutX="77.0" layoutY="186.0" prefHeight="25.0" prefWidth="184.0">
+      <TextField fx:id="signupEmailField" layoutX="51.0" layoutY="172.0" prefHeight="28.0" prefWidth="212.0">
          <font>
             <Font name="Verdana" size="14.0" />
          </font></TextField>
-      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="115.0" layoutY="214.0" prefHeight="23.0" prefWidth="104.0" text="Username" textAlignment="CENTER" textFill="#474747">
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="108.0" layoutY="201.0" prefHeight="23.0" prefWidth="104.0" text="Username" textAlignment="CENTER" textFill="#474747">
          <font>
             <Font name="Verdana" size="18.0" />
          </font>
       </Label>
-      <TextField fx:id="signupUsernameField" layoutX="75.0" layoutY="237.0" prefHeight="25.0" prefWidth="184.0">
+      <TextField fx:id="signupUsernameField" layoutX="52.0" layoutY="226.0" prefHeight="28.0" prefWidth="212.0">
          <font>
             <Font name="Verdana" size="14.0" />
          </font></TextField>
-      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="117.0" layoutY="265.0" prefHeight="17.0" prefWidth="104.0" text="Password" textAlignment="CENTER" textFill="#474747">
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="106.0" layoutY="252.0" prefHeight="17.0" prefWidth="104.0" text="Password" textAlignment="CENTER" textFill="#474747">
          <font>
             <Font name="Verdana" size="18.0" />
          </font>
       </Label>
-      <TextField fx:id="signupPasswordField" layoutX="77.0" layoutY="288.0" prefHeight="25.0" prefWidth="184.0">
+      <TextField fx:id="signupPasswordField" layoutX="51.0" layoutY="277.0" prefHeight="28.0" prefWidth="212.0">
          <font>
             <Font name="Verdana" size="14.0" />
          </font></TextField>
@@ -51,25 +51,41 @@
             <Font name="Verdana" size="14.0" />
          </font>
       </Label>
-      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="119.0" layoutY="60.0" text="First Name" textAlignment="CENTER" textFill="#474747">
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="54.0" layoutY="100.0" text="First Name" textAlignment="CENTER" textFill="#474747">
          <font>
             <Font name="Verdana" size="18.0" />
          </font>
       </Label>
-      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="121.0" layoutY="111.0" text="Last Name" textAlignment="CENTER" textFill="#474747">
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="164.0" layoutY="100.0" text="Last Name" textAlignment="CENTER" textFill="#474747">
          <font>
             <Font name="Verdana" size="18.0" />
          </font>
       </Label>
-      <TextField fx:id="signupFirstNameField" layoutX="75.0" layoutY="83.0" prefHeight="25.0" prefWidth="184.0">
+      <TextField fx:id="signupFirstNameField" layoutX="51.0" layoutY="123.0" prefHeight="28.0" prefWidth="104.0">
          <font>
             <Font name="Verdana" size="14.0" />
          </font>
       </TextField>
-      <TextField layoutX="77.0" layoutY="134.0" prefHeight="25.0" prefWidth="184.0">
+      <TextField layoutX="158.0" layoutY="123.0" prefHeight="28.0" prefWidth="104.0">
          <font>
             <Font name="Verdana" size="14.0" />
          </font>
       </TextField>
+      <TextField fx:id="loginPasswordField" layoutX="358.0" layoutY="212.0" prefHeight="25.0" prefWidth="184.0">
+         <font>
+            <Font name="Verdana" size="14.0" />
+         </font>
+      </TextField>
+      <TextField layoutX="358.0" layoutY="161.0" prefHeight="25.0" prefWidth="184.0" />
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="405.0" layoutY="139.0" text="Username" textAlignment="CENTER">
+         <font>
+            <Font name="Verdana" size="18.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="408.0" layoutY="190.0" text="Password" textAlignment="CENTER">
+         <font>
+            <Font name="Verdana" size="18.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>
