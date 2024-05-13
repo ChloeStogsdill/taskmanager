@@ -78,16 +78,12 @@ public class LoginPageController {
         return false;
     }
 
-    private void addUser(String username, String password){
-
-    }
-
     private boolean userExists(String username){
         return false;
     }
 
     public void switchToTasks(ActionEvent event) {
-
+        ViewSwitcher.switchTo(View.TASK_MANAGER);
     }
 
     public void exitButtonClicker(ActionEvent event) {
