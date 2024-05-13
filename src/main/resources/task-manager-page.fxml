@@ -1,14 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="TaskManagerPageController"
-            prefHeight="400.0" prefWidth="600.0">
-
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #474747;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="TaskManagerPageController">
+   <children>
+      <TabPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #474747;" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab style="-fx-background-color: #474747; -fx-text-base-color: #FFFFFF; -fx-font: Verdana;" text="All Tasks">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #474747;">
+                     <children>
+                        <TableView layoutX="16.0" layoutY="13.0" prefHeight="345.0" prefWidth="569.0">
+                          <columns>
+                            <TableColumn prefWidth="75.0" text="Task" />
+                            <TableColumn prefWidth="204.0" resizable="false" text="Description" />
+                              <TableColumn prefWidth="94.0" text="Class" />
+                              <TableColumn prefWidth="112.0" text="Due Date" />
+                              <TableColumn prefWidth="83.0" text="Priority" />
+                          </columns>
+                        </TableView>
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+            <Tab style="-fx-background-color: #474747; -fx-text-base-color: #FFFFFF;" text="All Classes">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #474747;">
+                     <children>
+                        <TableView layoutX="11.0" layoutY="13.0" prefHeight="346.0" prefWidth="579.0">
+                          <columns>
+                            <TableColumn prefWidth="172.0" text="Class" />
+                            <TableColumn prefWidth="75.0" text="CRN" />
+                              <TableColumn prefWidth="151.0" text="Professor" />
+                              <TableColumn prefWidth="71.0" text="Days" />
+                              <TableColumn prefWidth="109.0" text="Time" />
+                          </columns>
+                        </TableView>
+                     </children></AnchorPane>
+               </content>
+            </Tab>
+          <Tab style="-fx-background-color: #474747; -fx-text-base-color: #FFFFFF;" text="Add Task">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #474747;" />
+            </content>
+          </Tab>
+            <Tab style="-fx-background-color: #474747; -fx-text-base-color: #FFFFFF;" text="Add Class">
+                <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #474747;" />
+                </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
 </AnchorPane>

@@ -23,19 +23,17 @@ public class Task {
     @Column(name = "ClassFor")
     private String ClassFor;
 
-    @Column(name = "Recurring", nullable = false)
-    private boolean Recurring;
-
-    @Column(name = "RecurrencePeriod")
-    private String RecurrencePeriod;
+    @Column(name= "PriorityRating")
+    private int PriorityRating;
 
     public Task(){}
 
-    public Task(String username, String title, String description, String dueDate, String className, String recurring, String recurrencePeriod) {
+    public Task(String username, String title, String description, int PriorityRating, String ClassFor) {
         this.Username = username;
         this.Title = title;
         this.Description = description;
-        this.Recurring = Boolean.parseBoolean(recurring);
+        this.PriorityRating = PriorityRating;
+        this.ClassFor = ClassFor;
     }
 
     public int getId() {
@@ -87,19 +85,4 @@ public class Task {
         ClassFor = classFor;
     }
 
-    public boolean isRecurring() {
-        return Recurring;
-    }
-
-    public void setRecurring(boolean recurring) {
-        Recurring = recurring;
-    }
-
-    public String getRecurrencePeriod() {
-        return RecurrencePeriod;
-    }
-
-    public void setRecurrencePeriod(String recurrencePeriod) {
-        RecurrencePeriod = recurrencePeriod;
-    }
 }
