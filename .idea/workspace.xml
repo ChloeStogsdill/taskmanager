@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="80e55599-a306-433a-857b-b078f49bbee8" name="Changes" comment="updated user class to get more info about user">
-      <change beforePath="$PROJECT_DIR$/src/main/java/LoginPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/LoginPageController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/login-page.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/login-page.fxml" afterDir="false" />
+    <list default="true" id="80e55599-a306-433a-857b-b078f49bbee8" name="Changes" comment="added exit button">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,30 +50,31 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Gradle.taskmanager [:TaskManagerApplication.main()].executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager">
     <configuration name="JavaFX" type="Application" factoryName="Application">
       <option name="ALTERNATIVE_JRE_PATH" value="17" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="MAIN_CLASS_NAME" value="TaskManagerApplication" />
       <module name="taskmanager.main" />
-      <option name="VM_PARAMETERS" value="--module-path %&quot;C:\Users\giraf\Desktop\javafx-sdk-17.0.9&quot; --add-modules javafx.controls,javafx.fxml" />
+      <option name="VM_PARAMETERS" value="--module-path %C:\Users\giraf\Desktop\javafx-sdk-17.0.9 --add-modules javafx.controls,javafx.fxml" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -100,7 +100,7 @@
       <workItem from="1715561680781" duration="298000" />
       <workItem from="1715561989931" duration="1492000" />
       <workItem from="1715608990273" duration="1658000" />
-      <workItem from="1715632375366" duration="450000" />
+      <workItem from="1715632375366" duration="2039000" />
     </task>
     <task id="LOCAL-00001" summary="created project">
       <option name="closed" value="true" />
@@ -182,7 +182,47 @@
       <option name="project" value="LOCAL" />
       <updated>1715632594281</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="updated sign up in login controller for updated user class">
+      <option name="closed" value="true" />
+      <created>1715633096704</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1715633096704</updated>
+    </task>
+    <task id="LOCAL-00012" summary="added view switch method">
+      <option name="closed" value="true" />
+      <created>1715633141532</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1715633141532</updated>
+    </task>
+    <task id="LOCAL-00013" summary="added login logic to login controller">
+      <option name="closed" value="true" />
+      <created>1715633299217</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1715633299217</updated>
+    </task>
+    <task id="LOCAL-00014" summary="added login to fxml">
+      <option name="closed" value="true" />
+      <created>1715634104092</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1715634104092</updated>
+    </task>
+    <task id="LOCAL-00015" summary="added exit button">
+      <option name="closed" value="true" />
+      <created>1715634257662</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1715634257662</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -210,6 +250,11 @@
     <MESSAGE value="added buttons and labels to fxml file and register button logic to controller" />
     <MESSAGE value="xml updated" />
     <MESSAGE value="updated user class to get more info about user" />
-    <option name="LAST_COMMIT_MESSAGE" value="updated user class to get more info about user" />
+    <MESSAGE value="updated sign up in login controller for updated user class" />
+    <MESSAGE value="added view switch method" />
+    <MESSAGE value="added login logic to login controller" />
+    <MESSAGE value="added login to fxml" />
+    <MESSAGE value="added exit button" />
+    <option name="LAST_COMMIT_MESSAGE" value="added exit button" />
   </component>
 </project>

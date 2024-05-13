@@ -87,9 +87,9 @@
             <Font name="Verdana" size="18.0" />
          </font>
       </Label>
-      <Button alignment="CENTER" contentDisplay="CENTER" layoutX="574.0" layoutY="-1.0" mnemonicParsing="false" onAction="#exitButtonClicked" text="X" textAlignment="CENTER" textFill="WHITE" style="-fx-background-color: #474747;" >
+      <Button alignment="CENTER" contentDisplay="CENTER" layoutX="574.0" layoutY="-1.0" mnemonicParsing="false" onAction="#exitButtonClicked" style="-fx-background-color: #474747;" text="X" textAlignment="CENTER" textFill="WHITE">
          <font>
-            <Font size="14.0" />
+            <Font name="Verdana" size="14.0" />
          </font>
       </Button>
    </children>
