@@ -4,7 +4,7 @@ plugins {
     id 'org.openjfx.javafxplugin' version '0.1.0'
 }
 
-javafx{
+javafx {
     version = '17.0.9'
     modules = ['javafx.controls', 'javafx.fxml']
 }
@@ -14,16 +14,15 @@ repositories {
 }
 
 dependencies {
-    testImplementation platform('org.junit:junit-bom:5.10.0')
+    testImplementation platform('org.junit:junit-bom:5.9.1')
     testImplementation 'org.junit.jupiter:junit-jupiter'
-
-    implementaion group: 'org.xerial', name: 'sqlite-jdbc', version = '3.36.0.3'
-    implementaion 'org.slf4j:slf4j-api:2.0.9'
-    implementaion 'org.slf4j:slf4j-simple:2.0.9'
-
-    implementaion group: 'org.hibernate', name: 'hibernate-core', version: '5.6.10 Final'
-    implementaion group: 'javafx.persistence', name: 'javafx.persistence-api', version: '2.2'
-    implementaion group: 'com.github.gwenn', name: 'sqlite-dialect', version: '0.1.2'
+    implementation group: 'org.xerial', name: 'sqlite-jdbc', version: '3.36.0.3'
+    implementation 'org.slf4j:slf4j-api:2.0.9'
+    implementation 'org.slf4j:slf4j-simple:2.0.9'
+    
+    implementation group: 'org.hibernate', name: 'hibernate-core', version: '5.6.10.Final'
+    implementation group: 'javax.persistence', name: 'javax.persistence-api', version: '2.2'
+    implementation group: 'com.github.gwenn', name: 'sqlite-dialect', version: '0.1.2'
 }
 
 test {
