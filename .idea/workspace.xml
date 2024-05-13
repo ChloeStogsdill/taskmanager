@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="80e55599-a306-433a-857b-b078f49bbee8" name="Changes" comment="added login button fxml variable">
-      <change beforePath="$PROJECT_DIR$/src/main/resources/login-page.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/login-page.fxml" afterDir="false" />
-    </list>
+    <list default="true" id="80e55599-a306-433a-857b-b078f49bbee8" name="Changes" comment="added buttons and labels to fxml file and register button logic to controller" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -98,7 +96,7 @@
       <workItem from="1715549527798" duration="1334000" />
       <workItem from="1715561680781" duration="298000" />
       <workItem from="1715561989931" duration="1492000" />
-      <workItem from="1715608990273" duration="751000" />
+      <workItem from="1715608990273" duration="1658000" />
     </task>
     <task id="LOCAL-00001" summary="created project">
       <option name="closed" value="true" />
@@ -156,7 +154,15 @@
       <option name="project" value="LOCAL" />
       <updated>1715609573841</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="added buttons and labels to fxml file and register button logic to controller">
+      <option name="closed" value="true" />
+      <created>1715610627574</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1715610627574</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -181,6 +187,7 @@
     <MESSAGE value="added register button and fxml variable" />
     <MESSAGE value="added login button" />
     <MESSAGE value="added login button fxml variable" />
-    <option name="LAST_COMMIT_MESSAGE" value="added login button fxml variable" />
+    <MESSAGE value="added buttons and labels to fxml file and register button logic to controller" />
+    <option name="LAST_COMMIT_MESSAGE" value="added buttons and labels to fxml file and register button logic to controller" />
   </component>
 </project>
