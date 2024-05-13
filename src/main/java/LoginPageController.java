@@ -27,6 +27,12 @@ public class LoginPageController {
     TextField signupPasswordField;
 
     @FXML
+    TextField signupFirstNameField;
+
+    @FXML
+    TextField signupLastNameField;
+
+    @FXML
     Label messageLabel;
 
     public void loginButtonClicked(ActionEvent event) {
@@ -37,8 +43,11 @@ public class LoginPageController {
         String email = signupEmailField.getText();
         String username = signupUsernameField.getText();
         String password = signupPasswordField.getText();
+        String firstName = signupFirstNameField.getText();
+        String lastName = signupLastNameField.getText();
 
-        if(signupEmailField.getText().isEmpty() || signupUsernameField.getText().isEmpty() || signupPasswordField.getText().isEmpty()) {
+        if(signupEmailField.getText().isEmpty() || signupUsernameField.getText().isEmpty() || signupPasswordField.getText().isEmpty() ||
+                firstName.isEmpty() || lastName.isEmpty()) {
             messageLabel.setText("All fields must be populated");
         } else if(userExists(username)) {
             messageLabel.setText("Username already exists");
@@ -49,7 +58,7 @@ public class LoginPageController {
                 session = HibernateUtil.getSessionFactory().openSession();
                 session.beginTransaction();
 
-                User newUser = new User(email, username, password);
+                User newUser = new User(email, username, password, firstName, lastName);
 
                 session.persist(newUser);
                 session.getTransaction().commit();
