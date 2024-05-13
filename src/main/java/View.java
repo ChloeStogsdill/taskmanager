@@ -1,5 +1,6 @@
 public enum View {
-    LOGIN ("login-page.fxml");
+    LOGIN ("login-page.fxml"),
+    TASK_MANAGER("task-manager-page.fxml");
 
     private String filename;
 
