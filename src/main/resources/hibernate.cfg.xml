@@ -9,5 +9,7 @@
         <property name="connection.password">password</property>
 
         <property name="hibernate.hbm2ddl.auto" >update</property>
+
+        <mapping class="User"/>
     </session-factory>
 </hibernate-configuration>
