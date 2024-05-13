@@ -18,6 +18,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="FxmlFile" />
         <option value="Class" />
       </list>
     </option>
@@ -31,12 +32,12 @@
     &quot;assignee&quot;: &quot;ChloeStogsdill&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/ChloeStogsdill/taskmanager",
-    "accountId": "6ec1905c-c79c-4131-ba1a-8d5a059db23e"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/ChloeStogsdill/taskmanager&quot;,
+    &quot;accountId&quot;: &quot;6ec1905c-c79c-4131-ba1a-8d5a059db23e&quot;
   }
-}]]></component>
+}</component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
   &quot;associatedIndex&quot;: 4
@@ -93,6 +94,7 @@
       <updated>1715549526782</updated>
       <workItem from="1715549527798" duration="1334000" />
       <workItem from="1715561680781" duration="298000" />
+      <workItem from="1715561989931" duration="1492000" />
     </task>
     <task id="LOCAL-00001" summary="created project">
       <option name="closed" value="true" />
