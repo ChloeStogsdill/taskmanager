@@ -92,7 +92,23 @@ public class LoginPageController {
     }
 
     private boolean emailExists(String email) {
-        return false;
+        boolean emailExists = false;
+        try {
+            session = HibernateUtil.getSessionFactory().openSession();
+            session.beginTransaction();
+            String hql = "From User WHERE Email = :email";
+            TypedQuery<User> query = session.createQuery(hql, User.class);
+            query.setParameter("email", email);
+            User user = query.getSingleResult();
+            emailExists = user!=null;
+        } catch (Exception e) {
+            messageLabel.setText("Error occurred during log-in. Please try again.");
+        } finally {
+            if (session != null && session.isOpen()) {
+                session.close();
+            }
+        }
+        return emailExists;
     }
 
     private boolean usernameExists(String username){
