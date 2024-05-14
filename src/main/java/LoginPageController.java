@@ -80,6 +80,12 @@ public class LoginPageController {
                 session.persist(newUser);
                 session.getTransaction().commit();
 
+                signupEmailField.clear();
+                signupFirstNameField.clear();
+                signupLastNameField.clear();
+                signupPasswordField.clear();
+                signupUsernameField.clear();
+
             } catch (Exception e) {
                 System.out.println(e.getMessage());
                 messageLabel.setText("Error occurred during sign-up. Please try again.");
