@@ -86,6 +86,8 @@ public class LoginPageController {
                 signupPasswordField.clear();
                 signupUsernameField.clear();
 
+                messageLabel.setText("Sign-up successful");
+
             } catch (Exception e) {
                 System.out.println(e.getMessage());
                 messageLabel.setText("Error occurred during sign-up. Please try again.");
