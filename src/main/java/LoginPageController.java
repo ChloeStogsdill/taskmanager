@@ -96,11 +96,27 @@ public class LoginPageController {
     }
 
     private boolean usernameExists(String username){
-        return false;
+        boolean usernameExists = false;
+        try {
+            session = HibernateUtil.getSessionFactory().openSession();
+            session.beginTransaction();
+            String hql = "From User WHERE Username = :username";
+            TypedQuery<User> query = session.createQuery(hql, User.class);
+            query.setParameter("username", username);
+            User user = query.getSingleResult();
+            usernameExists = user!=null;
+        } catch (Exception e) {
+            messageLabel.setText("Error occurred during log-in. Please try again.");
+        } finally {
+            if (session != null && session.isOpen()) {
+                session.close();
+            }
+        }
+        return usernameExists;
     }
 
     private boolean userExists(String username, String password) {
-        Boolean UserExists = false;
+        boolean userExists = false;
         try {
             session = HibernateUtil.getSessionFactory().openSession();
             session.beginTransaction();
@@ -109,8 +125,7 @@ public class LoginPageController {
             query.setParameter("username", username);
             query.setParameter("password", password);
             User user = query.getSingleResult();
-            UserExists = user!=null;
-
+            userExists = user!=null;
         } catch (Exception e) {
             messageLabel.setText("Error occurred during log-in. Please try again.");
         } finally {
@@ -118,7 +133,7 @@ public class LoginPageController {
                 session.close();
             }
         }
-        return UserExists;
+        return userExists;
     }
 
     public void switchToTasks() {
