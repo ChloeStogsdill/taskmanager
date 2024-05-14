@@ -14,11 +14,11 @@
                      <children>
                         <TableView fx:id="allTasksTable" layoutX="16.0" layoutY="13.0" prefHeight="345.0" prefWidth="569.0">
                           <columns>
-                            <TableColumn prefWidth="75.0" text="Task" />
-                            <TableColumn prefWidth="204.0" resizable="false" text="Description" />
-                              <TableColumn prefWidth="94.0" text="Class" />
-                              <TableColumn prefWidth="112.0" text="Due Date" />
-                              <TableColumn prefWidth="83.0" text="Priority" />
+                            <TableColumn fx:id="taskNameColumn" prefWidth="75.0" text="Task" />
+                            <TableColumn fx:id="taskDescriptionColumn" prefWidth="204.0" resizable="false" text="Description" />
+                              <TableColumn fx:id="taskClassColumn" prefWidth="94.0" text="Class" />
+                              <TableColumn fx:id="taskDueDateColumn" prefWidth="112.0" text="Due Date" />
+                              <TableColumn fx:id="taskPriorityColumn" prefWidth="83.0" text="Priority" />
                           </columns>
                         </TableView>
                      </children></AnchorPane>
@@ -30,11 +30,11 @@
                      <children>
                         <TableView fx:id="allClassesTable" layoutX="11.0" layoutY="13.0" prefHeight="346.0" prefWidth="579.0">
                           <columns>
-                            <TableColumn prefWidth="172.0" text="Class" />
-                            <TableColumn prefWidth="75.0" text="CRN" />
-                              <TableColumn prefWidth="151.0" text="Professor" />
-                              <TableColumn prefWidth="71.0" text="Days" />
-                              <TableColumn prefWidth="109.0" text="Time" />
+                            <TableColumn fx:id="classNameColumn" prefWidth="172.0" text="Class" />
+                            <TableColumn fx:id="classCRNColumn" prefWidth="75.0" text="CRN" />
+                              <TableColumn fx:id="classProfessorColumn" prefWidth="151.0" text="Professor" />
+                              <TableColumn fx:id="classDatesColumn" prefWidth="71.0" text="Days" />
+                              <TableColumn fx:id="classTimeColumn" prefWidth="109.0" text="Time" />
                           </columns>
                         </TableView>
                      </children></AnchorPane>
