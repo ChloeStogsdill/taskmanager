@@ -8,6 +8,8 @@ import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 
+import javax.persistence.TypedQuery;
+
 public class LoginPageController {
     private static Session session;
 
@@ -98,7 +100,25 @@ public class LoginPageController {
     }
 
     private boolean userExists(String username, String password) {
-        return false;
+        Boolean UserExists = false;
+        try {
+            session = HibernateUtil.getSessionFactory().openSession();
+            session.beginTransaction();
+            String hql = "From User WHERE Username = :username AND Password = :password";
+            TypedQuery<User> query = session.createQuery(hql, User.class);
+            query.setParameter("username", username);
+            query.setParameter("password", password);
+            User user = query.getSingleResult();
+            UserExists = user!=null;
+
+        } catch (Exception e) {
+            messageLabel.setText("Error occurred during log-in. Please try again.");
+        } finally {
+            if (session != null && session.isOpen()) {
+                session.close();
+            }
+        }
+        return UserExists;
     }
 
     public void switchToTasks() {
