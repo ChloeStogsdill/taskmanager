@@ -24,6 +24,8 @@ public class TaskManagerPageController {
     @FXML
     TableColumn<Task, Integer> taskPriorityColumn;
 
+    ////////////////////////////////////////////////////////////
+
     @FXML
     TableView<Task> allClassesTable;
 
@@ -42,6 +44,8 @@ public class TaskManagerPageController {
     @FXML
     TableColumn<ClassFor, Integer> classTimeColumn;
 
+    ////////////////////////////////////////////////////////////
+
     @FXML
     TextField taskTitleField;
 
@@ -53,6 +57,8 @@ public class TaskManagerPageController {
 
     @FXML
     TextField priorityField;
+
+    ////////////////////////////////////////////////////////////
 
     @FXML
     TextField classField;
@@ -69,7 +75,11 @@ public class TaskManagerPageController {
     @FXML
     TextField meetingTimesField;
 
+    ////////////////////////////////////////////////////////////
+
     public void addTaskClicked(ActionEvent event){
+        String title = taskTitleField.getText();
+        String description = descriptionField.getText();
 
     }
 
