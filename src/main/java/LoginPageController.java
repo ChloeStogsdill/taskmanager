@@ -50,6 +50,7 @@ public class LoginPageController {
         if(username.isEmpty() || password.isEmpty()) {
             messageLabel.setText("All fields must be populated");
         } else if(userExists(username, password)){
+            CurrentUser.username = username;
             switchToTasks();
         } else {
             messageLabel.setText("Username or password is incorrect");

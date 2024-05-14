@@ -25,8 +25,8 @@ public class ClassFor {
     @Column(name = "MeetingTimes")
     private Time MeetingTimes;
 
-    @Column(name = "UserID")
-    private int UserID;
+    @Column(name = "Username")
+    private String Username;
 
     public int getId() {
         return id;
@@ -76,23 +76,23 @@ public class ClassFor {
         MeetingTimes = meetingTimes;
     }
 
-    public int getUserID() {
-        return UserID;
+    public String getUserID() {
+        return Username;
     }
 
-    public void setUserID(int userID) {
-        UserID = userID;
+    public void setUsername(String username) {
+        Username = username;
     }
 
     public ClassFor(){}
 
-    public ClassFor(String name, String crn, String professor, Date meetingDays, Time meetingTimes, int userID) {
+    public ClassFor(String name, String crn, String professor, Date meetingDays, Time meetingTimes, String username) {
         this.Name = name;
         this.CRN = crn;
         this.Professor = professor;
         this.MeetingDays = meetingDays;
         this.MeetingTimes = meetingTimes;
-        this.UserID = userID;
+        this.Username = username;
     }
 
 }

@@ -26,18 +26,14 @@ public class Task {
     @Column(name= "PriorityRating")
     private int PriorityRating;
 
-    @Column(name = "UserID", nullable = false)
-    private int UserID;
-
     public Task(){}
 
-    public Task(String username, String title, String description, int PriorityRating, String ClassFor, int userID) {
+    public Task(String username, String title, String description, int PriorityRating, String ClassFor) {
         this.Username = username;
         this.Title = title;
         this.Description = description;
         this.PriorityRating = PriorityRating;
         this.ClassFor = ClassFor;
-        this.UserID = userID;
     }
 
     public int getId() {
@@ -95,14 +91,6 @@ public class Task {
 
     public void setPriorityRating(int priorityRating) {
         PriorityRating = priorityRating;
-    }
-
-    public int getUserID() {
-        return UserID;
-    }
-
-    public void setUserID(int userID) {
-        UserID = userID;
     }
 
 }
