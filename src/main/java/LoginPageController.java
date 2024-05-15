@@ -76,7 +76,7 @@ public class LoginPageController {
                 session = HibernateUtil.getSessionFactory().openSession();
                 session.beginTransaction();
 
-                User newUser = new User(email, username, password, firstName, lastName);
+                User newUser = new User(username, password, email, firstName, lastName);
 
                 session.persist(newUser);
                 session.getTransaction().commit();
