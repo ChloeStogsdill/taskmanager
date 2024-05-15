@@ -38,7 +38,7 @@ public class TaskManagerPageController {
     ////////////////////////////////////////////////////////////
 
     @FXML
-    TableView<Task> allClassesTable;
+    TableView<ClassFor> allClassesTable;
 
     @FXML
     TableColumn<ClassFor, String> classNameColumn;
@@ -91,6 +91,7 @@ public class TaskManagerPageController {
     public void initialize(){
         populateClassSelection();
         populateTaskTable();
+        populateClassTable();
     }
 
     public void addTaskClicked(ActionEvent event){
@@ -201,6 +202,28 @@ public class TaskManagerPageController {
 
             ObservableList<Task> taskList = FXCollections.observableArrayList(tasks);
             allTasksTable.setItems(taskList);
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            session.close();
+        }
+    }
+
+    private void populateClassTable(){
+        classNameColumn.setCellValueFactory(new PropertyValueFactory<>("Name"));
+        classCRNColumn.setCellValueFactory(new PropertyValueFactory<>("CRN"));
+        classProfessorColumn.setCellValueFactory(new PropertyValueFactory<>("Professor"));
+        classDatesColumn.setCellValueFactory(new PropertyValueFactory<>("MeetingDays"));
+        classTimeColumn.setCellValueFactory(new PropertyValueFactory<>("MeetingTimes"));
+
+        try {
+            session = HibernateUtil.getSessionFactory().openSession();
+            session.beginTransaction();
+            List<ClassFor> classes = session.createQuery("from ClassFor", ClassFor.class).getResultList();
+            session.getTransaction().commit();
+
+            ObservableList<ClassFor> classList = FXCollections.observableArrayList(classes);
+            allClassesTable.setItems(classList);
         } catch (Exception e) {
             e.printStackTrace();
         } finally {

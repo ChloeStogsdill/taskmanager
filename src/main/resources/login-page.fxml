@@ -76,7 +76,11 @@
             <Font name="Verdana" size="14.0" />
          </font>
       </TextField>
-      <TextField layoutX="358.0" layoutY="161.0" prefHeight="25.0" prefWidth="184.0" />
+      <TextField fx:id="loginUsernameField" layoutX="358.0" layoutY="161.0" prefHeight="25.0" prefWidth="184.0">
+         <font>
+            <Font name="Verdana" size="14.0" />
+         </font>
+      </TextField>
       <Label alignment="CENTER" contentDisplay="CENTER" layoutX="405.0" layoutY="139.0" text="Username" textAlignment="CENTER">
          <font>
             <Font name="Verdana" size="18.0" />
