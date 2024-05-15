@@ -250,6 +250,7 @@ public class TaskManagerPageController {
         }
 
         allTasksTable.getItems().remove(selectedTask);
+        initialize();
     }
 
     private void deleteClassButtonClicked(ActionEvent event){
@@ -271,6 +272,7 @@ public class TaskManagerPageController {
         }
 
         allClassesTable.getItems().remove(selectedClass);
+        initialize();
     }
 
 

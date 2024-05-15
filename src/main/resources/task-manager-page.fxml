@@ -12,7 +12,7 @@
             <content>
               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #474747;">
                      <children>
-                        <TableView fx:id="allTasksTable" layoutX="16.0" layoutY="13.0" prefHeight="345.0" prefWidth="569.0">
+                        <TableView fx:id="allTasksTable" layoutX="11.0" layoutY="14.0" prefHeight="305.0" prefWidth="579.0">
                           <columns>
                             <TableColumn fx:id="taskNameColumn" prefWidth="75.0" text="Task" />
                             <TableColumn fx:id="taskDescriptionColumn" prefWidth="204.0" resizable="false" text="Description" />
@@ -21,6 +21,11 @@
                               <TableColumn fx:id="taskPriorityColumn" prefWidth="83.0" text="Priority" />
                           </columns>
                         </TableView>
+                        <Button alignment="CENTER" contentDisplay="CENTER" layoutX="239.0" layoutY="329.0" mnemonicParsing="false" onAction="#completeTaskButtonClicked" style="-fx-background-color: #FFFFFF;" text="Complete Task" textFill="#474747">
+                           <font>
+                              <Font name="Verdana" size="14.0" />
+                           </font>
+                        </Button>
                      </children></AnchorPane>
             </content>
           </Tab>
@@ -28,7 +33,7 @@
                <content>
                   <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #474747;">
                      <children>
-                        <TableView fx:id="allClassesTable" layoutX="11.0" layoutY="13.0" prefHeight="346.0" prefWidth="579.0">
+                        <TableView fx:id="allClassesTable" layoutX="11.0" layoutY="13.0" prefHeight="307.0" prefWidth="579.0">
                           <columns>
                             <TableColumn fx:id="classNameColumn" prefWidth="172.0" text="Class" />
                             <TableColumn fx:id="classCRNColumn" prefWidth="75.0" text="CRN" />
@@ -37,6 +42,10 @@
                               <TableColumn fx:id="classTimeColumn" prefWidth="109.0" text="Time" />
                           </columns>
                         </TableView>
+                        <Button alignment="CENTER" contentDisplay="CENTER" layoutX="248.0" layoutY="329.0" mnemonicParsing="false" onAction="#deleteClassButtonClicked" style="-fx-background-color: #FFFFFF;" text="Delete Class" textFill="#474747">
+                           <font>
+                              <Font name="Verdana" size="14.0" />
+                           </font></Button>
                      </children></AnchorPane>
                </content>
             </Tab>
