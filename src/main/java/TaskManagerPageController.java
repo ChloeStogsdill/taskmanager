@@ -231,5 +231,47 @@ public class TaskManagerPageController {
         }
     }
 
+    private void completeTaskButtonClicked(ActionEvent event){
+        Task selectedTask = allTasksTable.getSelectionModel().getSelectedItem();
+
+        if (selectedTask == null) {
+            return;
+        }
+
+        try {
+            session = HibernateUtil.getSessionFactory().openSession();
+            session.beginTransaction();
+            session.delete(selectedTask);
+            session.getTransaction().commit();
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            session.close();
+        }
+
+        allTasksTable.getItems().remove(selectedTask);
+    }
+
+    private void deleteClassButtonClicked(ActionEvent event){
+        ClassFor selectedClass = allClassesTable.getSelectionModel().getSelectedItem();
+
+        if (selectedClass == null) {
+            return;
+        }
+
+        try {
+            session = HibernateUtil.getSessionFactory().openSession();
+            session.beginTransaction();
+            session.delete(selectedClass);
+            session.getTransaction().commit();
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            session.close();
+        }
+
+        allClassesTable.getItems().remove(selectedClass);
+    }
+
 
 }
