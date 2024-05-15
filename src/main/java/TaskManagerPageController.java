@@ -79,9 +79,37 @@ public class TaskManagerPageController {
 
     ////////////////////////////////////////////////////////////
 
+    public void initialize(){
+        populateClassSelection();
+    }
+
     public void addTaskClicked(ActionEvent event){
         String title = taskTitleField.getText();
         String description = descriptionField.getText();
+        String classFor = classSelector.getText();
+        String priorityString = priorityField.getText();
+        int priority = priorityString.isEmpty() ? 0 : Integer.parseInt(priorityString);
+        String username = CurrentUser.username;
+
+        Task newTask = new Task(username, title, description, priority, classFor);
+
+        try{
+            session = HibernateUtil.getSessionFactory().openSession();
+            session.beginTransaction();
+            session.save(newTask);
+            session.getTransaction().commit();
+            allTasksTable.getItems().add(newTask);
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            session.close();
+        }
+
+        taskTitleField.clear();
+        descriptionField.clear();
+        classSelector.setText("Select Class");
+        priorityField.clear();
 
     }
 
