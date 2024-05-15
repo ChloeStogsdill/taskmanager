@@ -12,5 +12,6 @@
 
         <mapping class="User"/>
         <mapping class="Task"/>
+        <mapping class="ClassFor"/>
     </session-factory>
 </hibernate-configuration>

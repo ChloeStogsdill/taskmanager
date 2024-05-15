@@ -1,9 +1,7 @@
 import javax.persistence.*;
-import java.sql.Time;
-import java.util.Date;
 
 @Entity
-@Table(name="CLASSES")
+@Table(name="CLASSFOR")
 public class ClassFor {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -20,10 +18,10 @@ public class ClassFor {
     private String Professor;
 
     @Column(name = "MeetingDays", nullable = false)
-    private Date MeetingDays;
+    private String MeetingDays;
 
     @Column(name = "MeetingTimes")
-    private Time MeetingTimes;
+    private String MeetingTimes;
 
     @Column(name = "Username")
     private String Username;
@@ -60,19 +58,19 @@ public class ClassFor {
         Professor = professor;
     }
 
-    public Date getMeetingDays() {
+    public String getMeetingDays() {
         return MeetingDays;
     }
 
-    public void setMeetingDays(Date meetingDays) {
+    public void setMeetingDays(String meetingDays) {
         MeetingDays = meetingDays;
     }
 
-    public Time getMeetingTimes() {
+    public String getMeetingTimes() {
         return MeetingTimes;
     }
 
-    public void setMeetingTimes(Time meetingTimes) {
+    public void setMeetingTimes(String meetingTimes) {
         MeetingTimes = meetingTimes;
     }
 
@@ -86,7 +84,7 @@ public class ClassFor {
 
     public ClassFor(){}
 
-    public ClassFor(String name, String crn, String professor, Date meetingDays, Time meetingTimes, String username) {
+    public ClassFor(String name, String crn, String professor, String meetingDays, String meetingTimes, String username) {
         this.Name = name;
         this.CRN = crn;
         this.Professor = professor;

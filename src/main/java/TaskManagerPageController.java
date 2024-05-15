@@ -7,11 +7,6 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import org.hibernate.Session;
 import org.hibernate.query.Query;
 
-
-import java.sql.Time;
-import java.util.Date;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
 import java.util.List;
 
 public class TaskManagerPageController {
@@ -53,7 +48,7 @@ public class TaskManagerPageController {
     TableColumn<ClassFor, String> classDatesColumn;
 
     @FXML
-    TableColumn<ClassFor, Integer> classTimeColumn;
+    TableColumn<ClassFor, String> classTimeColumn;
 
     ////////////////////////////////////////////////////////////
 
@@ -128,18 +123,9 @@ public class TaskManagerPageController {
         String name = classField.getText();
         String crn = crnField.getText();
         String professor = professorField.getText();
-        String meetingDaysString = meetingDaysField.getText();
-        String meetingTimesString = meetingTimesField.getText();
+        String meetingDays = meetingDaysField.getText();
+        String meetingTimes = meetingTimesField.getText();
         String username = CurrentUser.username;
-
-        Date meetingDays = null;
-        Time meetingTimes = null;
-        try {
-            meetingDays = new SimpleDateFormat("yyyy-MM-dd").parse(meetingDaysString); // Assuming the date is in yyyy-MM-dd format
-            meetingTimes = Time.valueOf(meetingTimesString); // Assuming the time is in HH:mm:ss format
-        } catch (ParseException | IllegalArgumentException e) {
-            e.printStackTrace();
-        }
 
         ClassFor newClass = new ClassFor(name, crn, professor, meetingDays, meetingTimes, username);
 
@@ -231,6 +217,7 @@ public class TaskManagerPageController {
         }
     }
 
+    @FXML
     private void completeTaskButtonClicked(ActionEvent event){
         Task selectedTask = allTasksTable.getSelectionModel().getSelectedItem();
 
@@ -253,6 +240,7 @@ public class TaskManagerPageController {
         initialize();
     }
 
+    @FXML
     private void deleteClassButtonClicked(ActionEvent event){
         ClassFor selectedClass = allClassesTable.getSelectionModel().getSelectedItem();
 
