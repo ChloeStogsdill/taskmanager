@@ -1,8 +1,17 @@
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
+import javafx.scene.control.cell.PropertyValueFactory;
 import org.hibernate.Session;
 import org.hibernate.query.Query;
+
+
+import java.sql.Time;
+import java.util.Date;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.List;
 
 public class TaskManagerPageController {
@@ -81,6 +90,7 @@ public class TaskManagerPageController {
 
     public void initialize(){
         populateClassSelection();
+        populateTaskTable();
     }
 
     public void addTaskClicked(ActionEvent event){
@@ -114,6 +124,40 @@ public class TaskManagerPageController {
     }
 
     public  void addClassClicked(ActionEvent event){
+        String name = classField.getText();
+        String crn = crnField.getText();
+        String professor = professorField.getText();
+        String meetingDaysString = meetingDaysField.getText();
+        String meetingTimesString = meetingTimesField.getText();
+        String username = CurrentUser.username;
+
+        Date meetingDays = null;
+        Time meetingTimes = null;
+        try {
+            meetingDays = new SimpleDateFormat("yyyy-MM-dd").parse(meetingDaysString); // Assuming the date is in yyyy-MM-dd format
+            meetingTimes = Time.valueOf(meetingTimesString); // Assuming the time is in HH:mm:ss format
+        } catch (ParseException | IllegalArgumentException e) {
+            e.printStackTrace();
+        }
+
+        ClassFor newClass = new ClassFor(name, crn, professor, meetingDays, meetingTimes, username);
+
+        try{
+            session = HibernateUtil.getSessionFactory().openSession();
+            session.beginTransaction();
+            session.save(newClass);
+            session.getTransaction().commit();
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            session.close();
+        }
+
+        classField.clear();
+        crnField.clear();
+        professorField.clear();
+        meetingDaysField.clear();
+        meetingTimesField.clear();
 
     }
 
@@ -134,6 +178,29 @@ public class TaskManagerPageController {
                 menuItem.setOnAction(e -> classSelector.setText(classFor.getName()));
                 classSelector.getItems().add(menuItem);
             }
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            session.close();
+        }
+    }
+
+    private void populateTaskTable(){
+        taskNameColumn.setCellValueFactory(new PropertyValueFactory<>("Title"));
+        taskDescriptionColumn.setCellValueFactory(new PropertyValueFactory<>("Description"));
+        taskClassColumn.setCellValueFactory(new PropertyValueFactory<>("ClassFor"));
+        taskDueDateColumn.setCellValueFactory(new PropertyValueFactory<>("DueDate"));
+        taskPriorityColumn.setCellValueFactory(new PropertyValueFactory<>("PriorityRating"));
+
+        try {
+            session = HibernateUtil.getSessionFactory().openSession();
+
+            session.beginTransaction();
+            List<Task> tasks = session.createQuery("from Task", Task.class).getResultList();
+            session.getTransaction().commit();
+
+            ObservableList<Task> taskList = FXCollections.observableArrayList(tasks);
+            allTasksTable.setItems(taskList);
         } catch (Exception e) {
             e.printStackTrace();
         } finally {
